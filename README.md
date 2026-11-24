@@ -270,28 +270,28 @@ ainsi une famille facile a intercepter.
 
 ## 5. Plan de travail en 10 etapes
 
-Hypothese : l'equipe comporte deux personnes. Chaque personne travaille sur une
-branche separee. Les parties communes doivent etre petites et fusionnees via une
+L'equipe comporte trois personnes. Chaque personne travaille sur une branche
+separee. Les parties communes sont de petites tailles et fusionnees via une
 Pull Request avant la suite.
 
-| Etape | Travail | Branche proposee | Personne A | Personne B |
-|---|---|---|---|---|
-| 1 | Initialiser le depot, README, configuration et conventions | `setup/project` | Responsable | Revue |
-| 2 | Creer les exceptions et les classes de base | `feature/models-base` | Responsable | Revue |
-| 3 | Implementer Task, Event, Note et TaskState | `feature/entry-types` | Modele | Tests du modele |
-| 4 | Implementer DailyLog, MonthlyLog et BulletJournal | `feature/journal` | Journal | Revue |
-| 5 | Implementer les transitions et les tests du cycle de vie | `feature/task-lifecycle` | Responsable et revue croisee | Tests complets |
-| 6 | Implementer la migration jour/mois | `feature/migration` | Partie journaliere | Partie mensuelle |
-| 7 | Ajouter FutureLog, Index, collections et recherche | `feature/organization` | Organisation | Tests organisation |
-| 8 | Ajouter JSON, Markdown, logs et exceptions de persistance | `feature/persistence-display` | Persistance | Affichage |
-| 9 | Ajouter pytest, atteindre plus de 90 % de couverture et corriger les bugs | `test/coverage` | Tests metiers | Tests techniques |
-| 10 | Configurer CI, Sphinx, README final et verification complete | `docs/finalization` | CI et docs | Revue globale |
+| Etape | Travail | Branche proposee | Personne A | Personne B | Personne C |
+|---|---|---|---|---|---|
+| 1 | Initialiser le depot, README, configuration et conventions | `setup/project` | Responsable | Revue | Verification Git |
+| 2 | Creer les exceptions et les classes de base | `feature/models-base` | Responsable | Revue | Tests des erreurs |
+| 3 | Implementer Task, Event, Note et TaskState | `feature/entry-types` | Modeles | Tests du modele | Revue |
+| 4 | Implementer DailyLog, MonthlyLog et BulletJournal | `feature/journal` | Journal | DailyLog | MonthlyLog |
+| 5 | Implementer les transitions et les tests du cycle de vie | `feature/task-lifecycle` | Responsable | Tests du cycle de vie | Revue |
+| 6 | Implementer la migration jour/mois | `feature/migration` | Migration journaliere | Migration mensuelle | Tests de migration |
+| 7 | Ajouter FutureLog, Index, collections et recherche | `feature/organization` | Organization | Recherche | Tests organisation |
+| 8 | Ajouter JSON, Markdown, logs et exceptions de persistance | `feature/persistence-display` | Persistance | Affichage | Tests techniques |
+| 9 | Ajouter pytest, atteindre plus de 90 % de couverture et corriger les bugs | `test/coverage` | Tests metiers | Tests techniques | Suivi de couverture |
+| 10 | Configurer CI, Sphinx, README final et verification complete | `docs/finalization` | CI | Sphinx et README | Revue globale |
 
 ### Organisation Git
 
 - Une branche par fonctionnalite.
 - Une Pull Request par branche, meme pour une petite equipe.
-- Au moins une revue de l'autre membre avant la fusion.
+- Au moins une revue d'un autre membre avant la fusion.
 - Ne jamais publier directement sur `main`.
 - Fusionner les branches frequemment pour limiter les conflits.
 - Ajouter un message clair, par exemple `feat: add task lifecycle`.
