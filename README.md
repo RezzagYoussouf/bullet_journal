@@ -376,3 +376,6 @@ code : `pyproject.toml`, exceptions, classe abstraite `Entry`, enumeration
 `TaskState`, puis les premieres classes `Task`, `Event` et `Note`. Nous ajouterons
 egalement les premiers tests afin de verifier le modele avant les logs et la
 persistance.
+
+
+### TEST JE SUIS DANS LA BRAnCHE YOUSSEF LE BOSS 
